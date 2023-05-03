@@ -69,7 +69,7 @@
       <nav class="container">
         <img src="./assets/img/dc-logo.png" alt="logo-small">
         <ul>
-          <li :class="elem.current ? 'active' : '' " v-for="(elem, index) in contacts" :key="index">
+          <li :class="elem.current ? 'active-nav' : '' " v-for="(elem, index) in contacts" :key="index">
             <a :href="elem.url">{{ elem.nome }}</a>
           </li>
         </ul>
@@ -79,13 +79,38 @@
     <!-- Main -->
     <main>
       <!-- content goes here -->
-      <section>
-
+      <section id="content-goes-here">
+        <div class="container">
+          <h1> -- content goes here -- </h1>
+        </div>
       </section>
 
       <!-- links bg-blue -->
-      <section>
-
+      <section id="links-DC">
+        <div class="container">
+          <ul>
+            <li>
+              <img src="./assets/img/buy-comics-digital-comics.png" alt="">
+              <a href="/">DIGITAL COMICS</a>
+            </li>
+            <li>
+              <img src="./assets/img/buy-comics-merchandise.png" alt="">
+              <a href="/">DC MERCHANDISE</a>
+            </li>
+            <li>
+              <img src="./assets/img/buy-comics-subscriptions.png" alt="">
+              <a href="/">SUBSCRUBTION</a>
+            </li>
+            <li>
+              <img src="./assets/img/buy-comics-shop-locator.png" alt="">
+              <a href="/">COMIC SHOP LOCATOR</a>
+            </li>
+            <li>
+              <img src="./assets/img/buy-dc-power-visa.svg" alt="">
+              <a href="/">DC POWER VISA</a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
@@ -106,6 +131,7 @@
 
 <style lang="scss" scoped>
   @use './style/main.scss' as *;
+
   *{
     margin: 0;
     padding: 0;
@@ -131,9 +157,9 @@
           text-decoration: none;
         }
         &:hover{
-          border-bottom: 3px solid rgb(8 124 236);
+          border-bottom: 3px solid $blue-DC;
           a{
-            color: rgb(8 124 236);
+            color: $blue-DC;
           }
         }
       }
@@ -145,13 +171,46 @@
     margin: auto;
   }
 
-  .active{
-          border-bottom: 3px solid rgb(8 124 236);
+  .active-nav{
+          border-bottom: 3px solid $blue-DC;
           a{
-            color: rgb(8 124 236);
+            color: $blue-DC;
           }
         }
 
-  
+  // parte main
+  #content-goes-here{
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+  }
 
+  #links-DC{
+    background-color: $blue-DC;
+    div{
+      img{
+      height: 30px;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10%;
+      ul{
+        display: flex;
+        list-style: none;
+        li{
+          display: flex;
+          align-items: center;
+          margin: 0 1rem;
+          padding: 1rem 0;
+          font-size: small;
+          a{
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+          }
+          }
+        }
+    }
+  }
 </style>
