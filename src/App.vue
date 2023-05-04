@@ -1,6 +1,12 @@
 <script>
+  import contents from './components/contents.vue';
+  import jumbotron from './components/jumbotron.vue';
   export default{
     // name: "",
+    components: {
+      contents,
+      jumbotron,
+    },
     data(){
       return{
           contacts: [
@@ -57,7 +63,7 @@
 
           ]
       }
-    }
+    },
   }
 </script>
 
@@ -80,8 +86,9 @@
     <main>
       <!-- content goes here -->
       <section id="content-goes-here">
+        <jumbotron/>
         <div class="container">
-          <h1> -- content goes here -- </h1>
+          <contents/>
         </div>
       </section>
 
@@ -181,7 +188,6 @@
               </li>
             </ul>
           </div>
-          <img src="./assets/img/dc-logo-bg.png" alt="logo-bg">
         </div>
       </section>
 
@@ -311,14 +317,16 @@
   #all-links{
     background-image: url(./assets/img/footer-bg.jpg);
     background-size: cover;
-    padding: 1rem 0;
+
     .container{
       display: flex;
       justify-content: space-between;
-      img{
-        width: 300px;
-      }
+      background-image: url(./assets/img/dc-logo-bg.png);
+      background-position: center right;
+      background-size: 40%;
+      background-repeat: no-repeat;
       div{
+        padding: 1rem 0;
         display: flex;
         ul{
         list-style: none;
