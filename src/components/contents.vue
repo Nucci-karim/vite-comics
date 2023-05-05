@@ -92,7 +92,7 @@ export default{
             </div>
         </div>
         <div id="load">
-            <a >LOAD MORE</a>
+            <a href="/">LOAD MORE</a>
         </div>
     </div>
 </template>
@@ -105,7 +105,7 @@ export default{
         padding: 0.5rem 1rem;
         background-color: $blue-DC;
         text-decoration: none;
-        }
+    }
     #container-series{
         // display: grid;
         // grid-template-columns: auto auto auto auto auto auto;
@@ -125,7 +125,5 @@ export default{
         display: flex;
         justify-content: center;
     }
-
-    
 }
 </style>
